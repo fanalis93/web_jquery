@@ -13,7 +13,14 @@
         var newText = $("<p>");
         newText.append("<h1>I just replaced something</h1>");
         $("#textBox").html(newText);
-        $("#textBox").on("click", whenMouse);
+        $("#textBox").on("click", whenMouseIsClicked);
+        $("#textBox").on("mouseleave", whenMouseLeaves);
+        function whenMouseIsClicked() {
+          $("#textBox").html("<h1>You clicked a button</h1>");
+        }
+        function whenMouseLeaves() {
+          $("#textBox").html("<h1>Where are ya going brah</h1>");
+        }
       });
     </script>
   </head>
