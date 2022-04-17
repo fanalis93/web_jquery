@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show/hide</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      #text {
+        display: none;
+      }
+    </style>
+    <script>
+      $("document").ready(function () {
+        $("#show").on("click", function () {
+          $("#text").show();
+        });
+        $("#hide").on("click", function () {
+          $("#text").hide();
+        });
+        $("#toggle").on("click", function () {
+          $("#text").toggle(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="show">Click to show</a>
+    |
+    <a href="#" id="hide">Click to hide</a>
+    |
+    <a href="#" id="toggle">Click to toggle</a>
+
+    <div id="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam
+      blanditiis deleniti dicta obcaecati soluta, commodi, quisquam, sunt nulla
+      dolor doloribus pariatur saepe ipsa perferendis nobis harum rem voluptate
+      dolore.
+    </div>
+  </body>
+</html>
