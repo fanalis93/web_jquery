@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fading</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      #text {
+        display: none;
+      }
+    </style>
+    <script>
+      $("document").ready(function () {
+        $("#fade-in").on("click", function () {
+          $("#text").fadeIn(1000, function () {
+            alert("I am done fading in!");
+          });
+        });
+        $("#fade-out").on("click", function () {
+          $("#text").fadeOut("fast", function () {
+            alert("I am done fading out!");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="fade-in">Fade In</a>
+    |
+    <a href="#" id="fade-out">Fade Out</a>
+
+    <div id="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam
+      blanditiis deleniti dicta obcaecati soluta, commodi, quisquam, sunt nulla
+      dolor doloribus pariatur saepe ipsa perferendis nobis harum rem voluptate
+      dolore.
+    </div>
+  </body>
+</html>

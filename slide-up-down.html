@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide up and down</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      #text {
+        display: none;
+        background-color: aqua;
+      }
+      #slide-down {
+      }
+    </style>
+    <script>
+      $("document").ready(function () {
+        $("#slide-up").on("click", function () {
+          $("#text").slideUp(2000, "linear");
+        });
+        $("#slide-down").on("click", function () {
+          $("#text").slideDown(1000, "linear");
+        });
+        $("#slide-toggle").on("click", function () {
+          $("#text").slideToggle(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="slide-down">Click to Slide down</a>
+    |
+    <a href="#" id="slide-up">Click to Slide up</a>
+    |
+    <a href="#" id="slide-toggle">Click to Toggle Slide</a>
+
+    <div id="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam
+      blanditiis deleniti dicta obcaecati soluta, commodi, quisquam, sunt nulla
+      dolor doloribus pariatur saepe ipsa perferendis nobis harum rem voluptate
+      dolore.
+    </div>
+  </body>
+</html>
