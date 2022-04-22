@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script>
+      $("document").ready(function () {
+        $("#container h1:first").css({
+          "background-color": "grey",
+          border: "3px dotted red",
+        });
+
+        $("h1.sec").css({
+          border: "3px dotted yellow",
+        });
+        $("#container h1:odd").css({
+          "background-color": "grey",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>I love jQuery!</h1>
+      <h1 class="sec">I love jQuery!</h1>
+      <h1>I love jQuery!</h1>
+      <h1>I love jQuery!</h1>
+    </div>
+  </body>
+</html>

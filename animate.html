@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style></style>
+    <script>
+      $("document").ready(function () {
+        $("#grow").click(function () {
+          $("#textBox").animate({ width: "500px" }, 2000);
+        });
+        $("#move").click(function () {
+          $("#textBox").animate({ right: "0" }, 1000);
+        });
+        $("#bigger").click(function () {
+          $("#textBox").animate({ fontSize: "50px" }, 1000);
+        });
+        $("#many").click(function () {
+          $("#textBox").animate(
+            { right: "0", fontSize: "50px", width: "500px" },
+            1000
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="grow">Grow</a>|<a href="#" id="move">Move</a>|<a
+      href="#"
+      id="bigger"
+      >Bigger</a
+    >|<a href="#" id="many">Many Things</a>
+    <div id="textBox">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero a, doloribus
+      natus ipsa, voluptates eius placeat odio dolor necessitatibus aut saepe
+      iste beatae rerum neque laboriosam quisquam voluptatem nisi voluptate.
+    </div>
+  </body>
+</html>
