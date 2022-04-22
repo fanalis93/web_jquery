@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Content</title>
+    <script src="/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .color {
+        color: #00d8ff;
+      }
+    </style>
+    <script>
+      $("document").ready(function () {
+        $("#add-class").click(function () {
+          $("p:first").addClass("color");
+        });
+        $("#remove-class").click(function () {
+          $("p:first").removeClass("color");
+        });
+        $("#toggle-class").click(function () {
+          $("p:first").toggleClass("color");
+        });
+        $("#increase-class").click(function () {
+          $("p:first").css({ fontSize: "+=1px" });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <a href="#" id="add-class">Add Class</a>
+    <a href="#" id="remove-class">Remove Class</a>
+    <a href="#" id="toggle-class">Toggle Class</a>
+    <a href="#" id="increase-class">Increase Class</a>
+    <div id="container">
+      <p>
+        1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        repellendus quisquam unde incidunt culpa veniam qui libero odit maxime
+        at exercitationem, veritatis eveniet? Tempora veniam vero nesciunt
+        repudiandae doloribus consequuntur.
+      </p>
+      <p>
+        2. Corporis quaerat veritatis natus totam voluptate quia rem quidem ab
+        ipsa, facere error cupiditate nemo repellat illo. Facere dolorum
+        expedita blanditiis repudiandae laboriosam? Laboriosam laudantium animi
+        fugit, ipsam incidunt iste!
+      </p>
+      <p>
+        3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
+        modi neque maiores nostrum iure facilis quidem, quasi pariatur optio,
+        natus ipsum quae at dolorum illo minima quos accusamus tempora
+        molestias!
+      </p>
+      <p>
+        4. Quis ea dolore excepturi voluptate accusantium minus consequatur
+        recusandae consectetur doloribus quo, at quas odit animi, nisi
+        quibusdam! Obcaecati in laborum cum! Laborum, consectetur repudiandae
+        quas qui fuga similique ducimus.
+      </p>
+      <p>
+        5. Ab aspernatur quos sunt dolorum dignissimos id ea eius ipsam natus
+        ratione dolores accusamus beatae animi nulla aliquid ex earum voluptas
+        odio accusantium vero, nesciunt recusandae? Perferendis impedit sit
+        aperiam?
+      </p>
+    </div>
+  </body>
+</html>
